@@ -1,6 +1,5 @@
 "use client";
 import {
-  Title,
   Textarea,
   Button,
   Text,
@@ -49,9 +48,6 @@ export default function Home() {
           cleanedText ? "max-w-full" : "max-w-xl"
         }`}
       >
-        <Title order={2} className="text-center mb-6">
-          AI Text Parser
-        </Title>
         <div className="flex flex-col md:flex-row gap-6">
           <div className="flex-1">
             <Textarea

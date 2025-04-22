@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  Title,
   Textarea,
   Button,
   Text,
@@ -83,11 +82,10 @@ export default function CommentRemover() {
         shadow="md"
         p="xl"
         radius="md"
-        className="w-full max-w-4xl border border-gray-200 "
+        className={`bg-white w-full transition-all border border-gray-200 duration-300 ${
+          cleanedCode ? "max-w-full" : "max-w-xl"
+        }`}
       >
-        <Title order={3} className="text-center mb-6">
-          Code Comment Remover
-        </Title>
         <div className="flex flex-col md:flex-row gap-6">
           <div className="flex-1">
             <Textarea
@@ -95,7 +93,7 @@ export default function CommentRemover() {
               label="Input Code"
               autosize
               minRows={5}
-              maxRows={25}
+              maxRows={12}
               value={inputCode}
               onChange={(event) => setInputCode(event.currentTarget.value)}
               className="mb-4"
@@ -129,6 +127,7 @@ export default function CommentRemover() {
                 fullWidth
                 onClick={cleanCode}
                 className="bg-blue-500 hover:bg-blue-600"
+                disabled={!inputCode}
               >
                 Remove Comments
               </Button>
@@ -137,6 +136,7 @@ export default function CommentRemover() {
                 variant="outline"
                 onClick={resetCode}
                 className="border-gray-300 text-gray-700 hover:bg-gray-100"
+                disabled={!inputCode || !cleanedCode}
               >
                 Reset
               </Button>
@@ -166,7 +166,9 @@ export default function CommentRemover() {
                 p="md"
                 className="bg-gray-50 min-h-[250px] whitespace-pre-wrap"
               >
-                <Text>{cleanedCode}</Text>
+                <Text className="max-h-[400px] overflow-auto">
+                  {cleanedCode}
+                </Text>
               </Paper>
             </div>
           )}
