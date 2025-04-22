@@ -1,108 +1,71 @@
-AI Text Parser
+# AI Text Parser
+
 A simple web application built with Next.js, Mantine, and Tailwind CSS to clean AI-generated text by removing hashtags (#, ##, ###, etc.) and double asterisks (\*\*). The app provides a user-friendly interface to paste text, process it, and view the cleaned output.
-Features
 
-Input textarea for pasting AI-generated text
-Button to trigger text cleaning
-Display of cleaned text with removed hashtags and double asterisks
-Responsive design using Mantine components and Tailwind CSS
-Proper handling of extra whitespace after cleaning
+## Features
 
-Tech Stack
+- Input textarea for pasting AI-generated text
+- Button to trigger text cleaning
+- Display of cleaned text with removed hashtags and double asterisks
+- Responsive design using Mantine components and Tailwind CSS
+- Proper handling of extra whitespace after cleaning
 
-Next.js: React framework for server-side rendering and static site generation
-Mantine: UI component library for React
-Tailwind CSS: Utility-first CSS framework for styling
-TypeScript: For type-safe JavaScript development
+## Tech Stack
 
-Prerequisites
+- **Next.js**: React framework for server-side rendering and static site generation
+- **Mantine**: UI component library for React
+- **Tailwind CSS**: Utility-first CSS framework for styling
+- **TypeScript**: For type-safe JavaScript development
 
-Node.js (v16 or higher)
-npm (v7 or higher)
+## Prerequisites
 
-Installation
+- Node.js (v16 or higher)
+- npm (v7 or higher)
 
-Clone the repository (if applicable) or create a new Next.js project:
-npx create-next-app@latest ai-text-parser
-cd ai-text-parser
+## Installation
 
-Install dependencies:
-npm install @mantine/core @mantine/hooks tailwindcss postcss autoprefixer
+1. **Clone the repository** (if applicable) or create a new Next.js project:
 
-Initialize Tailwind CSS:
-npx tailwindcss init -p
+   ```bash
+   npx create-next-app@latest ai-text-parser
+   cd ai-text-parser
+   ```
 
-Configure Tailwind CSS:Replace the content of tailwind.config.js with:
-/** @type {import('tailwindcss').Config} \*/
-module.exports = {
-content: [
-'./app/**/_.{js,ts,jsx,tsx}',
-'./pages/\*\*/_.{js,ts,jsx,tsx}',
-'./components/\*_/_.{js,ts,jsx,tsx}',
-],
-theme: {
-extend: {},
-},
-plugins: [],
-}
+2. **Install dependencies**:
 
-Update global styles:Replace the content of app/globals.css with:
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+   ```bash
+   npm install @mantine/core @mantine/hooks tailwindcss postcss autoprefixer
+   ```
 
-body {
-@apply bg-gray-100;
-}
+3. **Initialize Tailwind CSS**:
 
-Set up Mantine provider:Update app/layout.tsx to include the Mantine provider:
-import { MantineProvider } from '@mantine/core';
-import '@mantine/core/styles.css';
-import './globals.css';
+   ```bash
+   npx tailwindcss init -p
+   ```
 
-export default function RootLayout({
-children,
-}: {
-children: React.ReactNode;
-}) {
-return (
-<html lang="en">
-<body>
-<MantineProvider>{children}</MantineProvider>
-</body>
-</html>
-);
-}
+4. **Run the development server**:
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) in your browser to view the app.
 
-Add the main page:Replace app/page.tsx with the provided parser code (see project files).
+## Usage
 
-Run the development server:
-npm run dev
+1. Paste AI-generated text containing hashtags (#, ##, etc.) or double asterisks (\*\*) into the input textarea.
+2. Click the "Clean Text" button.
+3. View the cleaned text in the output area below, with hashtags and double asterisks removed and whitespace normalized.
 
-Open http://localhost:3000 in your browser to view the app.
+## Potential Enhancements
 
-Usage
+- Add real-time text cleaning as the user types
+- Support additional markdown symbol removal (e.g., \*, \_, etc.)
+- Implement copy-to-clipboard functionality for the cleaned text
+- Add file upload for batch text processing
 
-Paste AI-generated text containing hashtags (#, ##, etc.) or double asterisks (\*\*) into the input textarea.
-Click the "Clean Text" button.
-View the cleaned text in the output area below, with hashtags and double asterisks removed and whitespace normalized.
+## Contributing
 
-Project Structure
-
-app/page.tsx: Main page component with the text parser UI and cleaning logic
-app/layout.tsx: Root layout with Mantine provider
-app/globals.css: Global styles with Tailwind CSS setup
-tailwind.config.js: Tailwind CSS configuration
-postcss.config.js: PostCSS configuration for Tailwind
-
-Potential Enhancements
-
-Add real-time text cleaning as the user types
-Support additional markdown symbol removal (e.g., \*, \_, etc.)
-Implement copy-to-clipboard functionality for the cleaned text
-Add file upload for batch text processing
-
-Contributing
 Feel free to submit issues or pull requests to enhance the functionality or fix bugs. Ensure code follows the existing style and includes appropriate tests.
-License
+
+## License
+
 This project is licensed under the MIT License.
