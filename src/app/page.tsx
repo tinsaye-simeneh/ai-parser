@@ -40,12 +40,12 @@ export default function Home() {
   };
 
   return (
-    <Container size="lg" className="min-h-screen flex mt-5 justify-center">
+    <Container size="lg" className="flex mt-5 justify-center ">
       <Paper
         shadow="md"
         p="xl"
         radius="md"
-        className={`bg-white w-full transition-all duration-300 ${
+        className={`bg-white w-full transition-all border border-gray-200 duration-300 ${
           cleanedText ? "max-w-full" : "max-w-xl"
         }`}
       >
@@ -59,7 +59,7 @@ export default function Home() {
               label="Input Text"
               autosize
               minRows={5}
-              maxRows={20}
+              maxRows={16}
               value={inputText}
               onChange={(event) => setInputText(event.currentTarget.value)}
               className="mb-4"
@@ -108,7 +108,7 @@ export default function Home() {
                 p="md"
                 className="bg-gray-50 min-h-[250px] whitespace-pre-wrap border border-gray-300"
               >
-                <Text className="max-h-[500px] overflow-auto">
+                <Text className="max-h-[400px] overflow-auto">
                   {cleanedText}
                 </Text>
               </Paper>

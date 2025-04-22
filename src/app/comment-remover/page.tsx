@@ -78,11 +78,13 @@ export default function CommentRemover() {
   };
 
   return (
-    <Container
-      size="lg"
-      className="min-h-screen flex items-center justify-center"
-    >
-      <Paper shadow="md" p="xl" radius="md" className="w-full max-w-4xl">
+    <Container size="lg" className="flex mt-5 justify-center">
+      <Paper
+        shadow="md"
+        p="xl"
+        radius="md"
+        className="w-full max-w-4xl border border-gray-200 "
+      >
         <Title order={3} className="text-center mb-6">
           Code Comment Remover
         </Title>
