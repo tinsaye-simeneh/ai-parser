@@ -31,7 +31,7 @@ export default function RootLayout({
                 </Link>
                 <Link
                   href="/comment-remover"
-                  className={`px-4 py-2 hover:bg-gray-700 ${
+                  className={`px-4 py-2 ml-3 hover:bg-gray-700 ${
                     pathname === "/comment-remover" ? "bg-gray-700" : ""
                   }`}
                 >
