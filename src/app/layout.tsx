@@ -5,6 +5,7 @@ import "@mantine/core/styles.css";
 import "./globals.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { IconMessageCode } from "@tabler/icons-react";
 
 export default function RootLayout({
   children,
@@ -19,7 +20,10 @@ export default function RootLayout({
         <MantineProvider>
           <header className="fixed top-0 left-0 right-0 h-16 bg-gray-800 text-white z-10 shadow-md">
             <div className="flex items-center justify-between h-full px-4">
-              <div className="text-lg font-bold">AI Parser</div>
+              <div className="text-lg font-bold hidden md:block">AI Parser</div>
+              <div className="text-2xl text-white md:hidden">
+                <IconMessageCode />
+              </div>
               <div className="flex items-center">
                 <Link
                   href="/"
@@ -35,7 +39,7 @@ export default function RootLayout({
                     pathname === "/comment-remover" ? "bg-gray-700" : ""
                   }`}
                 >
-                  Code Comment Remover
+                  Comment Remover
                 </Link>
               </div>
             </div>
