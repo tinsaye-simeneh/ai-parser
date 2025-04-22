@@ -81,6 +81,7 @@ export default function Home() {
                 variant="outline"
                 onClick={resetText}
                 className="border-gray-300 text-gray-700 hover:bg-gray-100"
+                disabled={!inputText || !cleanedText}
               >
                 Reset
               </Button>
