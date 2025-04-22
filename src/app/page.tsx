@@ -72,8 +72,9 @@ export default function Home() {
                 fullWidth
                 onClick={cleanText}
                 className="bg-blue-500 hover:bg-blue-600"
+                disabled={!inputText}
               >
-                Clean Text
+                Parse Text
               </Button>
               <Button
                 fullWidth
