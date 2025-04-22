@@ -1,4 +1,5 @@
 "use client";
+
 import { Title, Textarea, Button, Text, Container, Paper } from "@mantine/core";
 import { useState } from "react";
 
@@ -7,12 +8,13 @@ export default function Home() {
   const [cleanedText, setCleanedText] = useState("");
 
   const cleanText = () => {
-    const result = inputText
-      .replace(/#+/g, "")
-      .replace(/\*\*/g, "")
-      .replace(/\s+/g, " ")
-      .replace(/\n\s*\n/g, "\n")
-      .trim();
+    const lines = inputText.split("\n");
+
+    const cleanedLines = lines.map((line) =>
+      line.replace(/#+/g, "").replace(/\*\*/g, "").replace(/\s+/g, " ").trim()
+    );
+
+    const result = cleanedLines.filter((line) => line.length > 0).join("\n");
 
     setCleanedText(result);
   };
