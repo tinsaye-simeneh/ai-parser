@@ -4,7 +4,7 @@ import {
   Textarea,
   Button,
   Text,
-  Box,
+  Container,
   Paper,
   ActionIcon,
   Tooltip,
@@ -40,18 +40,22 @@ export default function Home() {
   };
 
   return (
-    <Box size="lg" className="min-h-screen flex items-center justify-center">
-      <Paper shadow="md" p="xl" radius="md" className="w-full max-w-4xl">
+    <Container
+      size="lg"
+      className="min-h-screen flex items-center justify-center"
+    >
+      <Paper shadow="md" p="xl" radius="md" className="w-full max-w-full">
         <Title order={2} className="text-center mb-6">
           AI Text Parser
         </Title>
-
         <div className="flex flex-col md:flex-row gap-6">
           <div className="flex-1">
             <Textarea
               placeholder="Paste your AI-generated text here..."
               label="Input Text"
-              minRows={10}
+              autosize
+              minRows={5}
+              maxRows={20}
               value={inputText}
               onChange={(event) => setInputText(event.currentTarget.value)}
               className="mb-4"
@@ -74,7 +78,6 @@ export default function Home() {
               </Button>
             </div>
           </div>
-
           {cleanedText && (
             <div className="flex-1">
               <div className="flex items-center justify-between mb-2">
@@ -105,6 +108,6 @@ export default function Home() {
           )}
         </div>
       </Paper>
-    </Box>
+    </Container>
   );
 }
