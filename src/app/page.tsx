@@ -1,3 +1,5 @@
+"use client";
+
 import { Title, Textarea, Button, Text, Container, Paper } from "@mantine/core";
 import { useState } from "react";
 
