@@ -40,10 +40,7 @@ export default function Home() {
   };
 
   return (
-    <Container
-      size="lg"
-      className="min-h-screen flex items-center justify-center"
-    >
+    <Container size="lg" className="min-h-screen flex mt-5 justify-center">
       <Paper
         shadow="md"
         p="xl"
