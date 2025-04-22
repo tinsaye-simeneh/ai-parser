@@ -44,7 +44,14 @@ export default function Home() {
       size="lg"
       className="min-h-screen flex items-center justify-center"
     >
-      <Paper shadow="md" p="xl" radius="md" className="w-full max-w-full">
+      <Paper
+        shadow="md"
+        p="xl"
+        radius="md"
+        className={`bg-white w-full transition-all duration-300 ${
+          cleanedText ? "max-w-full" : "max-w-xl"
+        }`}
+      >
         <Title order={2} className="text-center mb-6">
           AI Text Parser
         </Title>
@@ -100,9 +107,11 @@ export default function Home() {
               <Paper
                 shadow="xs"
                 p="md"
-                className="bg-gray-50 min-h-[250px] whitespace-pre-wrap"
+                className="bg-gray-50 min-h-[250px] whitespace-pre-wrap border border-gray-300"
               >
-                <Text>{cleanedText}</Text>
+                <Text className="max-h-[500px] overflow-auto">
+                  {cleanedText}
+                </Text>
               </Paper>
             </div>
           )}
