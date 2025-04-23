@@ -84,7 +84,7 @@ The app features a responsive UI with a navbar for navigation, autosize textarea
 1. Navigate to `/comment-remover` using the navbar.
 2. Paste code with comments into the textarea.
 3. Select comment types to remove (e.g., "All Comments," "Single-line," "Multi-line," "XML/HTML") via the multiselect.
-4. Optionally enter a regex pattern (e.g., `TODO|@author`) to preserve specific comments.
+4. Optionally enter a regex pattern (e.g., `//eslint-disabled-next-line`) to preserve specific comments.
 5. Click "Remove Comments" to process the code.
 6. View the cleaned code in the right-hand output area.
 7. Use the "Copy" button to copy the cleaned code or "Reset" to clear all fields.
