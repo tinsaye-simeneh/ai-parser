@@ -23,7 +23,7 @@ The app features a responsive UI with a navbar for navigation, autosize textarea
 - Input for pasting code
 - Removes single-line (//, #, --, ;, %), multi-line (/\* \*/), and XML/HTML (<!-- -->) comments
 - Multiselect to choose comment types or remove all (default)
-- Optional regex pattern to preserve specific comments (e.g., TODO, @author)
+- Optional regex pattern to preserve specific comments (e.g., //eslint-disabled-next-line)
 - Side-by-side input/output layout
 - Reset button to clear input/output
 - Copy button for cleaned code
