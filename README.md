@@ -11,17 +11,16 @@ The app features a responsive UI with a navbar for navigation, autosize textarea
 
 ### AI Text Parser
 
-- Input textarea for pasting AI-generated text
+- Input for pasting AI-generated text
 - Removes hashtags and double asterisks
 - Side-by-side input/output layout
-- Autosize textarea with 500px max height and scrolling
 - Reset button to clear input/output
 - Copy button for cleaned text
 - Preserves newlines and normalizes whitespace
 
 ### Code Comment Remover
 
-- Input textarea for pasting code
+- Input for pasting code
 - Removes single-line (//, #, --, ;, %), multi-line (/\* \*/), and XML/HTML (<!-- -->) comments
 - Multiselect to choose comment types or remove all (default)
 - Optional regex pattern to preserve specific comments (e.g., TODO, @author)
