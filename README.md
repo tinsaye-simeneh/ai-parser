@@ -1,4 +1,4 @@
-# AI Parser
+# Text Parser
 
 A web application with two tools built using Next.js, Mantine, and Tailwind CSS:
 
